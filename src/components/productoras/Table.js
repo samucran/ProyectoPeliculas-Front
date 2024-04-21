@@ -1,13 +1,16 @@
 import React from 'react'
-import TrDirector from './TrDirector'
+import TrProductoras from './TrProductora'
 
-export default function Table({ directores = [] }) {
+
+export default function Table({ productoras = [] }) {
     return (
         <table className="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
+                    <th scope="col">Slogan</th>
+                    <th scope="col">Descripcion</th>
                     <th scope="col">FechaCreacion</th>
                     <th scope="col">Estado</th>
                     <th scope="col">Acciones</th>
@@ -15,9 +18,9 @@ export default function Table({ directores = [] }) {
             </thead>
             <tbody>
                 {
-                    directores.map((director, index) => {
+                    productoras.map((productora, index) => {
                         return (
-                            <TrDirector director={director} key={index + 1} index={index} />
+                            <TrProductoras productora={productora} key={index + 1} index={index} />
                         )
                     })
                 }

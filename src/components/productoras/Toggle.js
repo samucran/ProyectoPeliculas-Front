@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Toggle({cambiarEstado, estado}) {
     return (
         <div className="form-check form-switch">
